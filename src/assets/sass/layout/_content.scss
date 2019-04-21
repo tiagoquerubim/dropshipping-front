@@ -1,0 +1,284 @@
+.layout-wrapper {
+    height: 100%;
+    min-height: 100%;
+
+    .layout-main {
+        transition:  0.3s;
+        height:88% ;
+        padding-left: 250px;
+        padding-top: 70px;
+
+        .layout-content {
+            .cad_cadastro{
+                padding: 1em;
+           }
+           
+            min-height: 100%;
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100%;
+
+            .titulo{
+                background: #FFFF;
+                padding-top: 30px;
+                height: 50px;
+
+            }
+
+            .h1Titulo{
+                margin-top: 0 !important;
+                padding-left: 0.8em;
+                color: $textColor !important;
+                font-weight: bold !important;
+            }
+
+            
+            .botaoSalvar{
+                float: right;
+            }
+
+            .content-principal{
+                padding-top: 20px;
+            }
+
+            .margem{
+                padding-bottom: 2em;
+            }
+     
+            .card {
+                //max-width: 1700px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+                margin: 0 auto;
+                height: 83%;
+                padding: 1em;
+                padding-left: 1.85em;
+                
+                &.card-w-title {
+                    padding-bottom: 32px;
+                }
+                
+                h1 {
+                    font-size: 24px;
+                    font-weight: 400;
+                    margin: 24px 0;
+                    color: $titleTextColor;
+                   
+                   
+                    
+                    &:first-child {
+                        margin-top: 16px;
+                    }
+                }
+                
+                h2 {
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: $titleTextColor;
+                }
+                
+                h3 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: $titleTextColor;
+                } 
+
+                h5{
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: $textColor;
+                    margin-block-start: 0em;
+                } 
+
+                .ui-widget-content {
+                     border: none;
+                }
+            }
+
+            .tag-button{
+              opacity: 0.99 !important;
+              padding: 0.09em 0em !important;
+            }
+
+            .form-date{
+                text-align: center;
+                padding: 5px 5px;
+            } 
+        }
+
+        .layout-main-mask {
+            display: none;
+        }
+
+      
+
+        .layout-breadcrumb {
+            box-shadow: 3px 0px 6px 1px rgba(0, 0, 0, 0.3);
+            
+            .layout-breadcrumb-options {
+                display: none;
+            }
+        }
+    }
+
+    &.layout-sidebar-active {
+            
+        .layout-main {
+            padding-left: 60px;
+            transition:  0.3s;
+        }
+    }
+}
+
+#fasesProjeto{
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+.remove-padding {
+    padding: 0px !important;
+}
+
+.form-label-left {
+    float: left;
+    padding: 5px 3px;
+}
+
+
+/*Media query divisão 15*/
+@media screen and (min-width: 64.063em) {
+    .ui-lg-4-small {
+        width: 30.8333% !important;
+    }
+}
+@media screen and (min-width: 64.063em) {
+    .fix-width {
+        width: 36% !important;
+    }
+}
+
+@media screen and (min-width: 64.063em) {
+    .ui-lg-2-s-small {
+        width: 16.4667%;
+    }
+}
+@media screen and (min-width: 64.063em) {
+    .ui-lg-1-s-small {
+        width: 12.6333%;
+    }
+}
+@media (max-width: 1380px) {
+    .ui-steps.steps-custom:before {
+        top: 17% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .ui-steps.steps-custom .ui-steps-item .ui-menuitem-link .ui-steps-title {
+        display: none !important;
+    }
+}
+.label-infor {
+    color: gray;
+    font-size: 15px;
+}
+
+.text-infor {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.text-infor-bold {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-menuitem-link {
+    background-color: transparent;
+    display: inherit;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-steps-number {
+    background-color: #C2C6CB;
+    color: #FFFFFF;
+    display: inline-block;
+    width: 36px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.ui-steps.steps-custom .ui-steps-item.ui-state-highlight .ui-steps-number {
+    background-color: #00426D !important;
+    color: #ffffff;
+}
+
+.ui-steps.steps-custom .ui-steps-item.ui-state-highlight .ui-steps-title {
+    font-weight: 700;
+    color: #00426D;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-menuitem-link .ui-steps-number {
+    background-color: #C2C6CB;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-steps-title {
+    color: #555555;
+}
+
+.ui-steps.steps-custom .ui-state-default {
+    border: none;
+}
+
+.ui-steps.steps-custom .ui-steps-title {
+    white-space: normal;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-steps-complete .ui-steps-number{
+    background-color: #00426D !important;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-menuitem-link .ui-steps-title {
+    display: inherit;
+}
+
+.ui-steps.steps-custom:before {
+    border: 1.5px solid #C2C6CB;
+    top: 23%;
+
+}
+
+.display-none {
+    display: none;
+}
+
+.content-message-info {
+    background-color: #ffffcc !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffcc99;
+}
+
+.content-message-success {
+    background-color: rgba(31, 162, 46, 0.2) !important;
+    border: 1px solid #1FA22E;
+}
+
+.content-message-error {
+    background-color: #faebe6 !important;
+    border: 1px solid #CC0000;
+}
+
+.content-m {
+    height: 545px;
+}
+
+.content-s {
+    height: 200px;
+}
+
+.content-sm {
+    height: 400px;
+}
+

@@ -1,0 +1,129 @@
+@media (max-width: 1024px) {
+    .layout-wrapper {
+       
+        .layout-sidebar {
+            left: -190px;
+
+            .layout-menu {
+                li {
+                    a {
+                        .svg-inline--fa {
+                            float: right;
+                            margin-right: 1.3em;
+                            transition: 0.3s !important;
+                        
+
+                        }
+                    }
+                }
+            }
+        }
+        &.layout-sidebar-active {
+
+            .layout-wrapper .layout-main .layout-breadcrumb {
+                padding-top: 30px;
+            }
+
+            .layout-sidebar {
+                left: 0;
+
+                .layout-menu {
+                    li {
+                        a {
+                            .svg-inline--fa {
+                                float: none;
+                                margin-right: 1.063em;
+                                transition: 0.3s !important;
+                            
+    
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+
+            .layout-main-mask {
+                z-index: 998;
+                position: fixed;
+                left: 0;
+                top: 64px;
+                background-color: $layoutMaskBgColor;
+                opacity: .5;
+                $opacity-ie: .5 * 100;
+                opacity:.5;
+                display: block;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .layout-main {  
+                padding-left: 250px;
+    
+            }
+        }
+
+        .layout-main {  
+            padding-left: 60px;
+
+            .layout-content {
+                .form-date{
+                    text-align: left;
+                   
+                }
+            }
+        }
+       
+    }
+
+    body {
+        &.hidden-overflow {
+            overflow: hidden;
+        } 
+    }
+
+    label.form-label{
+        float: inherit;
+    }
+}
+
+@media (max-width: 640px) {
+
+    body .ui-widget-header .ui-button, body .ui-widget-content .ui-button, body .ui-button{
+        float: none;
+    }
+
+    .col1{
+        width: 100% !important;  /*-- HERE --*/
+    }
+   
+}
+
+@media screen and (max-width: 320px){
+    .layout-wrapper .layout-topbar .logo {
+        width: 120px;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+    .layout-wrapper {
+       
+
+        &.layout-sidebar-active {
+            .layout-sidebar {
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+

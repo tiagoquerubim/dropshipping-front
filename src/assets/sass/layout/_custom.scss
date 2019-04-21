@@ -1,0 +1,43 @@
+
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    position: fixed !important;
+}
+
+.spinner-three-bounce {
+    position: fixed !important;
+}
+
+.labelInativo {
+    background: rgb(255, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    min-width: 60px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.labelAtivo {
+    background: rgb(0, 155, 0);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    min-width: 60px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/** FILE - UPLOAD **/
+.ui-fileupload-row img.ng-star-inserted{
+    max-width: 100px !important;
+    width: 100px !important;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.ocultarUpload  .ui-fileupload-buttonbar {
+    display: none;
+}

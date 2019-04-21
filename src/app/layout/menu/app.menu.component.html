@@ -1,0 +1,17 @@
+<!-- <div class="layout-menubar" >
+        <div id="menuBar">
+                <p-menubar [model]="model"></p-menubar>
+                
+        </div>
+</div> -->
+
+<div id="sideBarMenu" class="layout-sidebar" [ngClass]="{'layout-sidebar-active': app.sidebarActive}">
+
+            <p-scrollPanel #scrollPanel [style]="{height: '100%'}">
+                
+              <ul app-submenu [item]="model" root="true"  visible="true" class="layout-menu" ></ul> 
+             <!--     <p-menu  [model]="model" root="true"  visible="true" class="layout-menu"></p-menu> -->
+        </p-scrollPanel> 
+            
+</div>
+            

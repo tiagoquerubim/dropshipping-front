@@ -1,0 +1,58 @@
+<div id="tabCadastroRegistro">
+    <div class="card">
+        <div class="ui-fluid">
+            <div class="ui-g-12" style="padding: 0 !important;">
+                <div class="titulo">
+                   <h1 class="h1Titulo">Cadastro de Fornecedor</h1>
+                </div>
+                <p-card class="cad_cadastro ui-g-12 ">
+                    <div class="ng-star-inserted">
+                        <div class="ui-g ui-fluid">
+                            <div class="ui-g-12 ui-lg-12">
+                                <h4>Dados do fornencedor</h4>
+                                    <hr>
+                                <form class="ui-g form-group" (ngSubmit)="salvar()" #fornecedorForm="ngForm"> 
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-12 ui-md-4">
+                                            <span class="md-inputfield">
+                                                <input type="text" pInputText  required  name="nome" class="ng-dirty ng-invalid" #nome="ngModel" id="nome" [(ngModel)]="fornecedor.nome" />
+                                                <label>Nome do Fornecedor</label>
+                                            </span> 
+                                        
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-12 ui-md-4">
+                                            <span class="md-inputfield">
+                                                <input type="text" pInputText  required  name="nome" class="ng-dirty ng-invalid" #nome="ngModel" id="nome" [(ngModel)]="fornecedor.url" />
+                                                <label>Site</label>
+                                            </span> 
+                                        
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12">
+                                        <div class="ui-g-12 ui-md-4">
+                                                <div class="ui-g-12 ui-md-4"><p-checkbox name="ativo" binary="true" label="ativo" [(ngModel)]="fornecedor.ativo"></p-checkbox></div>               
+                                        </div>
+                                    </div>
+                                    <div class="ui-g-12" class="botaoSalvar">
+                                        <div class="ui-g-12 ui-md-2 ui-lg-2">
+                                            <p-button type="button" class="botaoSalvar" (click)="goBack()"
+                                            styleClass="ui-button-primary-large ui-button-info" label="Voltar"></p-button>
+                                        </div>
+                                        <div class="ui-g-12 ui-md-2  ui-lg-2">
+                                            <p-button [disabled]="fornecedorForm.form.invalid" type="submit" 
+                                            styleClass="ui-button-primary-large ui-button-info" label="SALVAR"></p-button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</div>

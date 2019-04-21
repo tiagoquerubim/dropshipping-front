@@ -1,0 +1,170 @@
+<div id="tabCadastroRegistro">
+    <div class="card">
+        <div class="ui-fluid">
+            <div class="ui-g-12" style="padding: 0 !important;">
+                <div class="titulo">
+                    <h1 class="h1Titulo">Cadastro de Produto</h1>
+                 </div>
+                 <div class="ng-star-inserted">
+                    <div class="ui-g ui-fluid">
+                        <div class="ui-g-12 ui-lg-12">
+                            <form class="ui-g form-group" (ngSubmit)="salvar()" #produtoForm="ngForm"> 
+                                <p-card class="cardProcessoRegistro ">
+                                    <div class="ui-g form-group">
+                                        <h4>Dados do fornencedor</h4>
+                                        <hr>
+                                            <div class="ui-g-12">
+                                                <div class="ui-g-12 ui-md-1">
+                                                        <label for="categoria">Loja</label>
+                                                </div>
+                                                <div class="ui-g-12 ui-md-3 ui-fluid">
+                                                        <p-dropdown [options]="optionsLoja" [showClear]="true" id="categoria" [(ngModel)]="produto.loja" name="lojaSelecionada" [filter]="false" optionLabel="nome" placeholder="Selecione uma loja" [autoWidth]="false"></p-dropdown>
+                                                </div>
+                                                <div class="ui-g-12 ui-md-1">
+                                                    <label for="categoria">Categoria</label>
+                                                </div>
+                                                <div class="ui-g-12 ui-md-3 ui-fluid">
+                                                        <p-dropdown [options]="optionsCategoria" [showClear]="true" id="categoria" [(ngModel)]="produto.categoria" name="categoriaSelecionada" [filter]="false" optionLabel="descricao" placeholder="Selecione uma categoria" [autoWidth]="false"></p-dropdown>
+                                                </div>
+                                                <div class="ui-g-12 ui-md-1" style="padding-left: 2em">
+                                                    <label for="fornecedor">Fornecedor</label>
+                                                </div>
+                                                <div class="ui-g-12 ui-md-3 ui-fluid">
+                                                    <p-dropdown [options]="optionsFornecedor" [showClear]="true" id="fornecedor" [(ngModel)]="produto.fornecedor" name="fornecedor" [filter]="false" optionLabel="nome" placeholder="Selecione uma categoria" [autoWidth]="false"></p-dropdown>
+                                                </div>
+                                                                
+                                            </div>
+                                        
+                                    </div>
+                                </p-card>
+
+                                <p-card class="cardProcessoRegistro ">
+                                    <div class="ui-g form-group">
+                                        <h4>Dados do produto</h4>
+                                            <hr>
+                                        <div class="ui-g-12">
+                                           <div class="ui-g-12 ui-md-2" >
+                                                <label for="nome">Titulo do anuncio</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                   <input type="text" pInputText  required id="nome" name="nome" class="ng-dirty ng-invalid" #nome="ngModel" id="nome" [(ngModel)]="produto.nome" />
+                                                    <label>Nome do produto</label>
+                                                </span>    
+                                            </div> 
+                                            <div class="ui-g-12 ui-md-2" style="padding-left: 2em">
+                                                <label for="cor">Cor</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                    <input type="text" pInputText id="cor"  name="cor" class="ng-dirty ng-invalid" #cor="ngModel" id="cor" [(ngModel)]="produto.cor" />
+                                                    <label>Cor:</label>
+                                                </span>                             
+                                            </div>
+                                                    
+                                        </div>
+
+                                        <div class="ui-g-12">
+                                            <div class="ui-g-12 ui-md-2" >
+                                                <label for="medidas">Dimensões</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                    <input type="text" pInputText id="medidas"  name="medidas" class="ng-dirty ng-invalid" #medidas="ngModel" id="medidas" [(ngModel)]="produto.medidas" />
+                                                    <label>Dimensoes:</label>
+                                                </span>                             
+                                            </div>
+                                            <div class="ui-g-12 ui-md-2" style="padding-left: 2em">
+                                                <label for="modelo">Modelo</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                    <input type="text" pInputText  id="modelo" name="modelo" class="ng-dirty ng-invalid" #modelo="ngModel" id="modelo" [(ngModel)]="produto.modelo" />
+                                                    <label>Modelo:</label>
+                                                </span>                             
+                                            </div>            
+                                        </div>         
+                                    </div>
+                                </p-card>
+                                <p-card class="cardProcessoRegistro ">
+                                    <div class="ui-g form-group">
+                                        <h4>Dados da venda</h4>
+                                        <hr>
+                                        <div class="ui-g-12">
+                                            <div class="ui-g-12 ui-md-2">
+                                                <label for="quantidade">Quantidade</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                    <input type="text" pInputText  required  name="quantidade" class="ng-dirty ng-invalid" #quantidade="ngModel" id="quantidade" [(ngModel)]="produto.quantidade" />
+                                                    <label>Quantidade:</label>
+                                                </span>                             
+                                            </div>
+                                            <div class="ui-g-12 ui-md-2">
+                                                <label for="modelo" style="padding-left: 2em">Preço</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                    <input type="text" pInputText  required  name="preco" class="ng-dirty ng-invalid" #preco="ngModel" id="preco" [(ngModel)]="produto.preco" />
+                                                    <label>Preço:</label>
+                                                </span>                             
+                                            </div>
+                                        </div>
+            
+                                        <div class="ui-g-12">
+                                            <div class="ui-g-12 ui-md-2">
+                                                <label for="descricao">Descrição</label>
+                                            </div>
+                                            <div class="ui-g-12 ui-md-4 ui-fluid">
+                                                <span class="md-inputfield">
+                                                    <textarea pInputTextarea autoResize="autoResize" id="descricao" 
+                                                        [rows]="5" [cols]="30" [(ngModel)]="produto.descricao" #descricao="ngModel" name="descricao"></textarea>
+                                                </span>                             
+                                            </div>
+                                        </div>
+                                        <div class="ui-g-12">
+                                            <div class="ui-g-12 ui-md-6">
+                                                <div class="ui-g-12 ui-md-4"><p-checkbox id="ativo" name="ativo" binary="true" label="ativo" [(ngModel)]="produto.ativo"></p-checkbox></div>               
+                                            </div>
+                                        </div>
+                                                
+                                    </div>
+                                </p-card>
+                                <p-card class="cardProcessoRegistro ">
+                                    <div class="ui-g form-group">
+                                        <h4>Anexar foto</h4>
+                                        <hr>
+                                        <p-fileUpload  #uploader name="files" id="arquivo" (onUpload)="onUpload($event)" showUploadButton="false" accept="image/*"  
+                                            url="{{uploadUrl}}" chooseLabel="Escolher Foto" maxFileSize="1000000"> 
+                                            <ng-template pTemplate="content">
+                                                <div *ngFor="let file of files" class="ui-fileupload-files ng-star-inserted">
+                                                    <div class="ui-g-12 ui-md-6 ui-lg-9">
+                                                        <a class='linkDownload' (click)="download(file)" download="{{file.nome}}" title="Criado em {{file.dataHoraCriacao}}   Excluído em {{file.dataHoraExclusao}}">
+                                                            {{file.name}} <br>  <i>{{file.size}}</i>
+                                                        </a>
+                                                         
+                                                    </div>
+                                                       
+                                                </div>
+                                            </ng-template>    
+                                        </p-fileUpload>
+                                    </div>
+                                </p-card>
+                               
+                              
+                                <div class="ui-g-12" class="botaoSalvar">
+                                        <div class="ui-g-12 ui-md-2 ui-lg-2">
+                                            <p-button type="button" class="botaoSalvar" (click)="goBack()"
+                                            styleClass="ui-button-primary-large ui-button-info" label="Voltar"></p-button>
+                                        </div>
+                                        <div class=" ui-fluid ui-g-12 ui-md-2  ui-lg-4">
+                                            <p-button [disabled]="produtoForm.form.invalid" type="submit" 
+                                            styleClass="ui-button-primary-large ui-button-info" label="SALVAR"></p-button>
+                                        </div>
+                                </div>
+                
+                            </form>
+            </div>
+        </div>
+    </div>
+</div>

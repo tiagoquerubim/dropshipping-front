@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+   "target": "http://api-tcc.7e14.starter-us-west-2.openshiftapps.com/",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
+

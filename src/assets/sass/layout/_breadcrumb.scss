@@ -1,0 +1,65 @@
+.layout-wrapper {
+
+    .layout-main {
+        .layout-breadcrumb {
+            background-color: #FFFF;
+            box-shadow: none !important;
+            min-height: 42px;
+            padding-top: 20px;
+            margin: 0 auto;
+            
+            ul {
+                margin: 8px 0 0 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+                color: $textSecondaryColor;
+                display: inline-block;
+                
+                li {
+                    display: inline-block; 
+                    vertical-align: middle;
+                    color: $textSecondaryColor;
+                    
+                    &:nth-child(even) {
+                        font-size: 20px;
+                    }
+                    
+                    &:first-child(even) {
+                        color: $primaryColor;
+                    }
+                    
+                    a {
+                        color: $textSecondaryColor;
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+            .layout-breadcrumb-options {
+                float: right;
+                padding: 0px 20px 0 0;
+                height: 100%;
+                
+                a {
+                    color: $textSecondaryColor;
+                    display: inline-block;
+                    width: 42px;
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    @include transition(background-color $transitionDuration);
+                    
+                    &:hover {
+                        background-color: $hoverBgColor;
+                    }
+                    
+                    i,em {
+                        line-height: inherit;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
